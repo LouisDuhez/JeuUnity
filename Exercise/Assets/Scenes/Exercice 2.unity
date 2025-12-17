@@ -788,7 +788,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79c2b93db0968841a3b6ec8d7884f2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProximityMessageController
-  m_MessageToPlayer: 
+  m_MessageToPlayer: You found an item. \nPress <color=#FBC531><b>Interact</b></color>
+    action to take it.
 --- !u!1001 &1699811854
 PrefabInstance:
   m_ObjectHideFlags: 0
