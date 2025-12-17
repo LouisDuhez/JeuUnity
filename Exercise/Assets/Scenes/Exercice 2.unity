@@ -361,6 +361,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6076585372736866196, guid: 2ab5ff6f2856f584488e0d1cfa4edaa0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1101076148}
+    - targetCorrespondingSourceObject: {fileID: 6076585372736866196, guid: 2ab5ff6f2856f584488e0d1cfa4edaa0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1101076149}
   m_SourcePrefab: {fileID: 100100000, guid: 2ab5ff6f2856f584488e0d1cfa4edaa0, type: 3}
 --- !u!1 &410087039
 GameObject:
@@ -773,6 +776,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0.3, z: 0}
+--- !u!114 &1101076149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101076145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d79c2b93db0968841a3b6ec8d7884f2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProximityMessageController
+  m_MessageToPlayer: 
 --- !u!1001 &1699811854
 PrefabInstance:
   m_ObjectHideFlags: 0

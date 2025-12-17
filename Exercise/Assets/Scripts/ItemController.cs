@@ -26,12 +26,10 @@ public class ItemController : TriggerController
 
     private void PickItem()
     {
-        Debug.Log("Quelque chose touche le trigger : " );
         // 1. Enregistrer l'item dans l'Inventaire (Singleton)
         InventorySystem.Instance.StoreItem(UniqueID);
 
         // 2. Désactiver l'interaction (pour ne pas pouvoir le ramasser 2 fois)
-        // Note : Ta méthode Interact() met déjà CanInteract = false, 
         DisableInteraction();
 
         // 3. Faire disparaître l'objet visuel (le GameObject de la clé)
