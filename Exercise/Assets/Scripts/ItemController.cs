@@ -26,11 +26,18 @@ public class ItemController : TriggerController
 
     private void PickItem()
     {
-        //TODO: Replace this with the correct implementation
-        throw new NotImplementedException("PickItem method is yet not implemented.");
+        Debug.Log("Quelque chose touche le trigger : " );
+        // 1. Enregistrer l'item dans l'Inventaire (Singleton)
+        InventorySystem.Instance.StoreItem(UniqueID);
 
-        //TODO: Store the item into the InventorySystem instance
-        //TODO: Disable interaction from Trigger
-        //TODO: Deactivate item GameObject
+        // 2. Désactiver l'interaction (pour ne pas pouvoir le ramasser 2 fois)
+        // Note : Ta méthode Interact() met déjà CanInteract = false, 
+        DisableInteraction();
+
+        // 3. Faire disparaître l'objet visuel (le GameObject de la clé)
+        if (m_Item != null)
+        {
+            m_Item.SetActive(false);
+        }
     }
 }
