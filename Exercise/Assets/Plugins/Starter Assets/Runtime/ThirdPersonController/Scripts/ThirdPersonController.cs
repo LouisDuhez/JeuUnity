@@ -122,7 +122,6 @@ namespace StarterAssets
             }
         }
 
-
         private void Awake()
         {
             // get a reference to our main camera
@@ -386,6 +385,26 @@ namespace StarterAssets
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
+            }
+        }
+
+        public void ForceGroundedState()
+        {
+            // 1. On lui dit "Tu es au sol !"
+            Grounded = true;
+
+            // 2. On annule la vitesse de chute accumulée
+            _verticalVelocity = -2f;
+
+            // 3. On reset le timer pour qu'il ne croie pas qu'il tombe
+            _fallTimeoutDelta = FallTimeout;
+
+            // 4. On force l'Animator à arrêter le FreeFall tout de suite
+            if (_hasAnimator)
+            {
+                _animator.SetBool(_animIDJump, false);
+                _animator.SetBool(_animIDFreeFall, false); // C'est ça qui désactive ta case !
+                _animator.SetBool(_animIDGrounded, true);
             }
         }
     }
